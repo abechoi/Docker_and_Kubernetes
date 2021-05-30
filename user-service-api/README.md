@@ -72,3 +72,27 @@ Dockerfile
 ```
 docker run -d --name user-api -p 3000:3000 user-service-api:latest
 ```
+
+<h1 align="center">
+How to Reduce Size of Node API
+</h1>
+
+## 1. Pull Alpine Linux Containers
+
+```
+docker pull node:alpine
+```
+
+## 2. Edit Dockerfile: FROM
+
+Dockerfile
+
+```
+FROM node:alpine
+```
+
+## 3. Rebuild Image
+
+```
+docker build -t user-service-api:latest .
+```

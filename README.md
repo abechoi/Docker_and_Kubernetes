@@ -18,3 +18,4 @@ By Amigoscode, Techworld with NaNa, and FreeCodeCamp
 ## 2. /user-service-api
 
 - How to Containize Node API
+- How to Reduce Size of Node API
