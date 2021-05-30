@@ -55,7 +55,17 @@ CMD node index.js
 docker build --tag user-service-api:latest .
 ```
 
-## 6. Test Image
+## 6. Create Dockerignore
+
+.dockerignore
+
+```
+node_modules
+Dockerfile
+.git
+```
+
+## 7. Test Image
 
 ```
 docker run -d --name user-api -p 3000:3000 user-service-api:latest
