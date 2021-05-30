@@ -10,7 +10,7 @@ npm i --save express
 docker pull node
 ```
 
-# 2. Create index.js
+## 2. Create index.js
 
 index.js
 
@@ -42,7 +42,8 @@ node index.js
 Dockerfile
 
 ```
-FROM node:latest
+# use versions on tags to prevent breaking changes
+FROM node:16-alpine
 WORKDIR /app
 # cache - to prevent unnecessary package downloads
 ADD package*.json ./

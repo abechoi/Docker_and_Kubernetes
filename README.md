@@ -19,3 +19,7 @@ By Amigoscode, Techworld with NaNa, and FreeCodeCamp
 
 - How to Containize Node API
 - How to Reduce Size of Node API
+
+## 3. Tags and Versions
+
+- How to Prevent Breaking Changes via Updates
