@@ -78,3 +78,17 @@ docker logs user-service-api
 # returns logs in real-time.
 docker logs -f abechoi-website
 ```
+
+## Kubernetes
+
+- Orchestration provides high availability, scalability, and disaster recovery.
+- Architecture:
+
+  1. Master Node - UI, API, CLI
+     a. API Server - Entrypoint to K8S cluster
+     b. Controller Manager - Keeps track of cluster events.
+     c. Scheduler - Ensures Pods placement.
+     d. etcd - Kubernetes backing key-value store and snapshots.
+     e. Always have backup Master Nodes.
+
+  2. Virtual Network - Creates a unified machine of nodes.
