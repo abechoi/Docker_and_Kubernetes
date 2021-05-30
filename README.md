@@ -20,7 +20,7 @@ By Amigoscode, Techworld with NaNa, and FreeCodeCamp
 - How to Containize Node API
 - How to Reduce Size of Node API
 
-## 3. Tags and Versions
+## 3. Tags & Versions
 
 - Always add versions to tags to prevent breaking changes.
 
@@ -62,4 +62,18 @@ docker push abechoi/website:2
 
 # pulls latest if tag is unspecified
 docker pull abechoi/website
+```
+
+## 5. Inspect & Logs
+
+```
+# returns low-level information on container
+docker inspect user-service-api
+```
+
+```
+# returns logs
+docker logs user-service-api
+# returns logs in real-time.
+docker logs -f abechoi-website
 ```
