@@ -22,4 +22,16 @@ By Amigoscode, Techworld with NaNa, and FreeCodeCamp
 
 ## 3. Tags and Versions
 
-- How to Prevent Breaking Changes via Updates
+- Always add versions to tags to prevent breaking changes.
+
+Dockerfile
+
+```
+FROM nginx:1.21.0-alpine
+```
+
+Build with version tags
+
+```
+docker build -t website:1.21.0-alpine .
+```
