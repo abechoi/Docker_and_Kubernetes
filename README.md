@@ -35,3 +35,31 @@ Build with version tags
 ```
 docker build -t website:1.21.0-alpine .
 ```
+
+## 4. Docker Registries
+
+- A highly scabable server side application that stores and lets you distribute Docker images.
+- Used in CI/CD pipelines.
+- Runs applications.
+- Can be private or public with Docker Hub, quay.io, and Amazon ECR.
+
+Sign into Docker Hub
+
+```
+docker login
+```
+
+Format image names and tags, then push to Docker Hub
+
+```
+docker tag abechoi-website:latest abechoi/website:latest
+docker tag abechoi-website:1 abechoi/website:1
+docket tag abechoi-website:2 abechoi/website:2
+
+docker push abechoi/website:latest
+docker push abechoi/website:1
+docker push abechoi/website:2
+
+# pulls latest if tag is unspecified
+docker pull abechoi/website
+```
