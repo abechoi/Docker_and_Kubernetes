@@ -69,6 +69,7 @@ docker pull abechoi/website
 ```
 # returns low-level information on container
 docker inspect user-service-api
+# ctrl+f to search Cmd for commands
 ```
 
 ```
