@@ -8,7 +8,7 @@ Full Course for Beginners
 By Amigoscode, Techworld with NaNa, and FreeCodeCamp
 </p>
 
-# Projects
+# Docker
 
 ## 1. /website
 
@@ -79,16 +79,67 @@ docker logs user-service-api
 docker logs -f abechoi-website
 ```
 
-## Kubernetes
+# Kubernetes
 
-- Orchestration provides high availability, scalability, and disaster recovery.
-- Architecture:
+Orchestration provides high availability, scalability, and disaster recovery.
 
-  1. Master Node - UI, API, CLI
-     a. API Server - Entrypoint to K8S cluster
-     b. Controller Manager - Keeps track of cluster events.
-     c. Scheduler - Ensures Pods placement.
-     d. etcd - Kubernetes backing key-value store and snapshots.
-     e. Always have backup Master Nodes.
+## 1. Kubernetes Architecture:
 
-  2. Virtual Network - Creates a unified machine of nodes.
+1. Master Node - UI, API, CLI
+   a. API Server - Entrypoint to K8S cluster.
+   b. Controller Manager - Keeps track of cluster events.
+   c. Scheduler - Ensures Pods placement.
+   d. etcd - Kubernetes backing key-value store and snapshots.
+   e. Always have backup Master Nodes.
+
+2. Virtual Network - Creates a unified machine of nodes.
+
+3. Worker Nodes - Runs tasks assigned by the Master Node.
+
+## 2. Components
+
+1. Pod
+   a. Smallest unit of K8s.
+   b. Abstration over container.
+   c. Usually 1 application per Pod.
+   d. IP address per Pod.
+   e. New IP address on recreation.
+
+2. Sevice
+   a. Permanent IP address.
+   b. Lifecycle of Pods and Services is not correlated.
+   c. Load balancer.
+
+3. Ingress
+   a. Forwards IP address to Services.
+
+4. ConfigMap
+   a. External configuration of your application.
+   a. Stores database URL.
+
+5. Secret
+   a. Used to store secret data, such as credentials in base64 encoded format.
+
+6. Deployment
+   a. Blueprint to replicate Pods.
+   b. Defines replicas and scalability.
+   c. Abstraction of Pods.
+
+7. StatefulSet
+   a. Replicates databases, but databases are often hosted outside K8s clusters.
+
+## 3. Volumes
+
+K8s do not manage data persistance, so process the data to be stores locally or remotely.
+
+## 4. Minikube and Kubectl
+
+1. Minikube
+   a. A lightweight hybrid node of master and worker.
+   b. A single node K8s cluster that runs in Virtual Box.
+   c. For testing purposes.
+
+2. Kubectl
+   a. Command line tool for Kubernetes.
+   b. Creates and destroys Pods.
+   c. Creates services.
