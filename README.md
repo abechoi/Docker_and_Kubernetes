@@ -171,6 +171,13 @@ kubectl create deployment nginx-depl --image=nginx
 # returns logs
 kubectl logs nginx-depl-5c8bf76b5b-qj9tc
 
+# returns info about pod
+kubectl describe pod nginx-depl-5c8bf76b5b-qj9tc
+
 # access interactive shell
 kubectl exec -it mongo-depl-5fd6b7d4b4-wwwtz -- bin/bash
 ```
+
+## 5. /kubectl-apply
+
+- How to Create and Apply a Config File
