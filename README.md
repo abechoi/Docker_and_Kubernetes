@@ -183,3 +183,5 @@ kubectl exec -it mongo-depl-5fd6b7d4b4-wwwtz -- bin/bash
 - How to Create and Apply a Config File
 
 ## 6. /mongo-db-pod
+
+- How to Connect Mongo DB and Express Pods

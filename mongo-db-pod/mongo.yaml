@@ -18,6 +18,7 @@ spec:
         - name: mongodb
           image: mongo
           ports:
+            # connects to targetPort
             - containerPort: 27017
           env:
             - name: MONGO_INITDB_ROOT_USERNAME
@@ -30,3 +31,18 @@ spec:
                 secretKeyRef:
                   name: mongodb-secret
                   key: mongo-root-password
+---
+# Service Configuration
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  # selects app to bind to
+  selector:
+    app: mongodb
+  ports:
+    - protocol: TCP
+      port: 27017
+      # connects to containerPort
+      targetPort: 27017
