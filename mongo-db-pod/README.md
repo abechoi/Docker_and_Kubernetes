@@ -138,6 +138,32 @@ spec:
                 configMapKeyRef:
                   name: mongodb-configmap
                   key: database_url
+---
+# External Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-express-service
+spec:
+  selector:
+    app: mongo-express
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081
+      nodePort: 30000
 ```
 
 ## 6. Apply Config Map and Deployment for Mongo Express
+
+```
+kubectl apply -f mongo-configmap.yaml
+kubectl apply -f mongo-express.yaml
+```
+
+## 7. Get External IP Address for Mongo Express
+
+```
+minikube service mongo-express-service
+```

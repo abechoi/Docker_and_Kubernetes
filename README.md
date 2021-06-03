@@ -153,17 +153,8 @@ minikube start --vm-driver=hyperkit
 # returns information about the minikube
 minikube status
 
-# returns nodes
-kubectl get nodes
-
-# returns pods
-kubectl get pods
-
-# returns services
-kubectl get services
-
-# returns deployments
-kubectl get deployments
+# returns all | nodes | pods | services | deployments
+kubectl get all | nodes | pods | services | deployments
 
 # creates a pod using nginx image
 kubectl create deployment nginx-depl --image=nginx
@@ -171,8 +162,8 @@ kubectl create deployment nginx-depl --image=nginx
 # returns logs
 kubectl logs nginx-depl-5c8bf76b5b-qj9tc
 
-# returns info about pod
-kubectl describe pod nginx-depl-5c8bf76b5b-qj9tc
+# returns info about node | pod | service
+kubectl describe node | pod | service NAME
 
 # access interactive shell
 kubectl exec -it mongo-depl-5fd6b7d4b4-wwwtz -- bin/bash
