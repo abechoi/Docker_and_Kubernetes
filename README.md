@@ -143,3 +143,28 @@ K8s do not manage data persistance, so process the data to be stores locally or 
    a. Command line tool for Kubernetes.
    b. Creates and destroys Pods.
    c. Creates services.
+
+3. Commands
+
+```
+# start minikub with hyperkit as vm driver
+minikube start --vm-driver=hyperkit
+
+# returns information about the minikube
+minikube status
+
+# returns nodes
+kubectl get nodes
+
+# returns pods
+kubectl get pods
+
+# returns services
+kubectl get services
+
+# returns deployments
+kubectl get deployments
+
+# creates a pod using nginx image
+kubectl create deployment nginx-depl --image=nginx
+```
