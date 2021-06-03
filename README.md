@@ -167,4 +167,10 @@ kubectl get deployments
 
 # creates a pod using nginx image
 kubectl create deployment nginx-depl --image=nginx
+
+# returns logs
+kubectl logs nginx-depl-5c8bf76b5b-qj9tc
+
+# access interactive shell
+kubectl exec -it mongo-depl-5fd6b7d4b4-wwwtz -- bin/bash
 ```
