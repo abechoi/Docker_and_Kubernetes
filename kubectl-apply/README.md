@@ -41,5 +41,5 @@ kubectl apply -f nginx-deployment.yaml
 ## 3. Delete the Kubernetes Configuration File
 
 ```
-kubectl delete -f nginx-deployment.yaml
+kubectl delete pod nginx-deployment.yaml
 ```
